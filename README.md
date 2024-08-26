@@ -1,4 +1,4 @@
-# 基于meson + Qt的基础工程模板
+# 基于meson + Qt6的基础工程模板
 
 # 如何使用
 
@@ -15,6 +15,7 @@ cd your_project_name # 进入文件夹
 4. executable里面修改编译的可执行文件名称, 默认为main
 5. 如果需要隐藏控制台debug信息, 可取消executable里面的win_subsystem注释
 6. 如果有新增加的*.ui,*.cpp,*h(**仅需添加带有Q_OBJECT**)文件,请添加到对应的uis, moc_headers, src中
+7. 如果需要设置软件图标,请提供ico文件到resources目录下,并修改logo.rc里面对应的图标名称
 
 ## 编译运行测试
 
