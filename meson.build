@@ -12,6 +12,8 @@ project('qt_meson_project_template', 'cpp',
 qt6 = import('qt6')
 qt6_dep = dependency('qt6', modules : ['Core', 'Widgets', 'Gui'], main : true)
 
+deps = [qt6_dep]
+
 inc = include_directories('include')
 
 src = files(
@@ -73,6 +75,6 @@ endif
 
 executable('main', src,
            include_directories : inc,
-           dependencies : qt6_dep,
+           dependencies : deps,
            # win_subsystem : 'windows'， 用于隐藏控制台debug信息
 )
